@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "yekan";
+  font-style: normal;
+  font-weight: 400;
+  src: local("yekan"), url("../public/fonts/yekan-regular.eot"),
+    url("../public/fonts/yekan-regular.woff"),
+    url("../public/fonts/yekan-regular.ttf");
+  font-display: swap;
+}
+
+* {
+  font-family: "yekan", Arial, Helvetica, sans-serif;
+}
