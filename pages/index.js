@@ -28,7 +28,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       products: res.data,
-    }, // will be passed to the page component as props
+    },
   };
 }
 
