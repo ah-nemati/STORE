@@ -98,7 +98,7 @@ const Navbar = () => {
                       }
                     />
                     <span className="absolute top-2 mr-3 h-6 w-6 text-center bg-red-500 rounded-full text-white">
-                      {cart.length}
+                      {/* {cart.length} */}
                     </span>
                   </Href>
                   {/* {Object.keys(auth).length === 0 ? (
@@ -162,7 +162,7 @@ const Navbar = () => {
                       }
                     />
                     <span className="absolute top-4 mr-3 h-6 w-6 text-center bg-red-500 rounded-full text-white">
-                    {cart.length}
+                    {/* {cart.length} */}
                     </span>
                   </Href>
                   {/* {Object.keys(auth).length === 0 ? (
