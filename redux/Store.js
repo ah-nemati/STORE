@@ -11,20 +11,20 @@ export const DataProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducers, initialState);
   // const { cart } = state;
 
-  useEffect(() => {
-    const firstlogin = localStorage.getItem("firstlogin");
-    if (firstlogin)
-      axios.get(`${process.env.BASE_URL}/api/auth/accesstoken`).then((res) => {
-        if (res.err) return localStorage.removeItem(firstlogin);
-        dispatch({
-          type: "AUTH",
-          payload: {
-            token: res.data.accesstoken,
-            user: res.data.users,
-          },
-        });
-      });
-  }, []);
+  // useEffect(() => {
+  //   const firstlogin = localStorage.getItem("firstlogin");
+  //   if (firstlogin)
+  //     axios.get(`${process.env.BASE_URL}/api/auth/accesstoken`).then((res) => {
+  //       if (res.err) return localStorage.removeItem(firstlogin);
+  //       dispatch({
+  //         type: "AUTH",
+  //         payload: {
+  //           token: res.data.accesstoken,
+  //           user: res.data.users,
+  //         },
+  //       });
+  //     });
+  // }, []);
 
   // useEffect(() => {
   //   const __next__cart__store = JSON.parse(

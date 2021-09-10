@@ -3,18 +3,18 @@ import Cookie from "js-cookie";
 
 import { Href } from "./Href";
 import { Svg } from "./Svg";
-import { DataContext } from "../redux/Store";
-import { useRouter } from "next/router";
+// import { DataContext } from "../redux/Store";
+// import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [down, setDown] = useState(false);
 
-  const [state, dispatch] = useContext(DataContext);
-  const { auth
-    // ,cart
-   } = state;
-  const router = useRouter();
+  // const [state, dispatch] = useContext(DataContext);
+  // const { auth
+  //   // ,cart
+  //  } = state;
+  // const router = useRouter();
 
   // const logout = () => {
   //   Cookie.remove("refreshtoken", {
@@ -101,7 +101,7 @@ const Navbar = () => {
                       {cart.length}
                     </span>
                   </Href>
-                  {Object.keys(auth).length === 0 ? (
+                  {/* {Object.keys(auth).length === 0 ? (
                     <div className="mr-3">
                       <Href href="/auth/Register" className="">
                         <div className="flex justify-start items-center">
@@ -116,7 +116,7 @@ const Navbar = () => {
                     </div>
                   ) : (
                     profile()
-                  )}
+                  )} */}
                 </div>
                 <div className="hidden md:block mr-10">
                   <ul
@@ -165,7 +165,7 @@ const Navbar = () => {
                     {cart.length}
                     </span>
                   </Href>
-                  {Object.keys(auth).length === 0 ? (
+                  {/* {Object.keys(auth).length === 0 ? (
                     <div className="mr-3">
                       <Href href="/auth/Register" className="">
                         <div className="flex justify-start items-center">
@@ -180,7 +180,7 @@ const Navbar = () => {
                     </div>
                   ) : (
                     profile()
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
