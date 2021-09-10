@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 // import { Cart } from "../components/Cart";
-import { DataContext } from "../redux/Store";
+// import { DataContext } from "../redux/Store";
 
 const cart = () => {
-  const [state, dispatch] = useContext(DataContext);
+  // const [state, dispatch] = useContext(DataContext);
 //   const { cart, notify } = state;
   const [total, setTotal] = useState(0);
 
