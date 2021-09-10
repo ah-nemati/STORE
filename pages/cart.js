@@ -1,21 +1,21 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Cart } from "../components/Cart";
+// import { Cart } from "../components/Cart";
 import { DataContext } from "../redux/Store";
 
 const cart = () => {
   const [state, dispatch] = useContext(DataContext);
-  const { cart, notify } = state;
+//   const { cart, notify } = state;
   const [total, setTotal] = useState(0);
 
-  useEffect(() => {
-    const gettotal = () => {
-      const res = cart.reduce((prev, item) => {
-        return prev + item.price * item.qountity;
-      }, 0);
-      setTotal(res);
-    };
-    gettotal();
-  }, [cart]);
+//   useEffect(() => {
+//     const gettotal = () => {
+//       const res = cart.reduce((prev, item) => {
+//         return prev + item.price * item.qountity;
+//       }, 0);
+//       setTotal(res);
+//     };
+//     gettotal();
+//   }, [cart]);
   return (
     <>
       <div className="">
@@ -41,14 +41,14 @@ const cart = () => {
                       Price
                     </h3>
                   </div>
-                  {cart.map((item) => (
-                    <Cart
-                      key={item._id}
-                      item={item}
-                      dispatch={dispatch}
-                      cart={cart}
-                    />
-                  ))}
+//                   {cart.map((item) => (
+//                     <Cart
+//                       key={item._id}
+//                       item={item}
+//                       dispatch={dispatch}
+//                       cart={cart}
+//                     />
+//                   ))}
                 </div>
                 <div className=" px-8 py-10">
                   <h1 className="font-semibold text-2xl border-b pb-8">
@@ -56,9 +56,9 @@ const cart = () => {
                   </h1>
                   <div className="flex justify-between mt-10 mb-5">
                     <span className="font-semibold text-sm uppercase">
-                      Items {cart.length}
+//                       Items {cart.length}
                     </span>
-                    <span className="font-semibold text-sm">{total}$</span>
+//                     <span className="font-semibold text-sm">{total}$</span>
                   </div>
                   <div>
                     <label className="font-medium inline-block mb-3 text-sm uppercase">
@@ -87,7 +87,7 @@ const cart = () => {
                   <div className="border-t mt-8">
                     <div className="flex font-semibold justify-between py-6 text-sm uppercase">
                       <span>Total cost</span>
-                      <span>${total}</span>
+//                       <span>${total}</span>
                     </div>
                     <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full rounded-md">
                       Checkout
