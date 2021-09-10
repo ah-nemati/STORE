@@ -3,61 +3,59 @@ import Cookie from "js-cookie";
 
 import { Href } from "./Href";
 import { Svg } from "./Svg";
-// import { DataContext } from "../redux/Store";
-// import { useRouter } from "next/router";
+import { DataContext } from "../redux/Store";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [down, setDown] = useState(false);
 
-  // const [state, dispatch] = useContext(DataContext);
-  // const { auth
-  //   // ,cart
-  //  } = state;
-  // const router = useRouter();
+  const [state, dispatch] = useContext(DataContext);
+  const { auth,cart } = state;
+  const router = useRouter();
 
-  // const logout = () => {
-  //   Cookie.remove("refreshtoken", {
-  //     path: `${process.env.BASE_URL}/api/auth/accesstoken`,
-  //   });
-  //   localStorage.removeItem("firstlogin");
-  //   dispatch({ type: "AUTH", payload: {} });
-  //   dispatch({ type: "NOTIFY", payload: { success: "logged out!" } });
-  // };
+  const logout = () => {
+    Cookie.remove("refreshtoken", {
+      path: `${process.env.BASE_URL}/api/auth/accesstoken`,
+    });
+    localStorage.removeItem("firstlogin");
+    dispatch({ type: "AUTH", payload: {} });
+    dispatch({ type: "NOTIFY", payload: { success: "logged out!" } });
+  };
 
-  // useEffect(() => {
-  //   if (Object.keys(auth).length !== 0) router.push("/");
-  // }, [auth]);
+  useEffect(() => {
+    if (Object.keys(auth).length !== 0) router.push("/");
+  }, [auth]);
 
-  // const profile = () => {
-  //   return (
-  //     <div className="px-4">
-  //       <div className="flex">
-  //         <img src={auth.user.avatar} alt="" className="w-9" />
-  //         <button
-  //           onClick={() => setDown(!down)}
-  //           className="self-center px-2 hover:shadow-inner rounded-circle"
-  //         >
-  //           {auth.user.name}
-  //         </button>
-  //       </div>
-  //       {down ? (
-  //         <ul className="absolute w-28 bg-white border-2 text-center rounded-md">
-  //           <li className="p-2">
-  //             <a href="#">profile</a>
-  //           </li>
-  //           <li className="p-2">
-  //             <a href="#" onClick={logout}>
-  //               logout
-  //             </a>
-  //           </li>
-  //         </ul>
-  //       ) : (
-  //         ""
-  //       )}
-  //     </div>
-  //   );
-  // };
+  const profile = () => {
+    return (
+      <div className="px-4">
+        <div className="flex">
+          <img src={auth.user.avatar} alt="" className="w-9" />
+          <button
+            onClick={() => setDown(!down)}
+            className="self-center px-2 hover:shadow-inner rounded-circle"
+          >
+            {auth.user.name}
+          </button>
+        </div>
+        {down ? (
+          <ul className="absolute w-28 bg-white border-2 text-center rounded-md">
+            <li className="p-2">
+              <a href="#">profile</a>
+            </li>
+            <li className="p-2">
+              <a href="#" onClick={logout}>
+                logout
+              </a>
+            </li>
+          </ul>
+        ) : (
+          ""
+        )}
+      </div>
+    );
+  };
 
   return (
     <header className="sticky top-0 w-full z-20 bg-white shadow-xl" dir="rtl">
@@ -98,10 +96,10 @@ const Navbar = () => {
                       }
                     />
                     <span className="absolute top-2 mr-3 h-6 w-6 text-center bg-red-500 rounded-full text-white">
-                      {/* {cart.length} */}
+                      {cart.length}
                     </span>
                   </Href>
-                  {/* {Object.keys(auth).length === 0 ? (
+                  {Object.keys(auth).length === 0 ? (
                     <div className="mr-3">
                       <Href href="/auth/Register" className="">
                         <div className="flex justify-start items-center">
@@ -116,7 +114,7 @@ const Navbar = () => {
                     </div>
                   ) : (
                     profile()
-                  )} */}
+                  )}
                 </div>
                 <div className="hidden md:block mr-10">
                   <ul
@@ -162,10 +160,10 @@ const Navbar = () => {
                       }
                     />
                     <span className="absolute top-4 mr-3 h-6 w-6 text-center bg-red-500 rounded-full text-white">
-                    {/* {cart.length} */}
+                    {cart.length}
                     </span>
                   </Href>
-                  {/* {Object.keys(auth).length === 0 ? (
+                  {Object.keys(auth).length === 0 ? (
                     <div className="mr-3">
                       <Href href="/auth/Register" className="">
                         <div className="flex justify-start items-center">
@@ -180,7 +178,7 @@ const Navbar = () => {
                     </div>
                   ) : (
                     profile()
-                  )} */}
+                  )}
                 </div>
               </div>
             </div>
