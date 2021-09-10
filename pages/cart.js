@@ -27,7 +27,7 @@ const cart = () => {
                   <div className="flex justify-between border-b pb-8">
                     <h1 className="font-semibold text-2xl">Shopping Cart</h1>
                     <h2 className="font-semibold text-2xl">
-                      {cart.length} Items
+                      {/* {cart.length} Items */}
                     </h2>
                   </div>
                   <div className="flex mt-10 mb-5">
@@ -41,14 +41,14 @@ const cart = () => {
                       Price
                     </h3>
                   </div>
-//                   {cart.map((item) => (
+{/* //                   {cart.map((item) => (
 //                     <Cart
 //                       key={item._id}
 //                       item={item}
 //                       dispatch={dispatch}
 //                       cart={cart}
 //                     />
-//                   ))}
+//                   ))} */}
                 </div>
                 <div className=" px-8 py-10">
                   <h1 className="font-semibold text-2xl border-b pb-8">
@@ -56,9 +56,9 @@ const cart = () => {
                   </h1>
                   <div className="flex justify-between mt-10 mb-5">
                     <span className="font-semibold text-sm uppercase">
-//                       Items {cart.length}
+                       {/* Items {cart.length} */}
                     </span>
-//                     <span className="font-semibold text-sm">{total}$</span>
+                     {/* <span className="font-semibold text-sm">{total}$</span> */}
                   </div>
                   <div>
                     <label className="font-medium inline-block mb-3 text-sm uppercase">
@@ -87,7 +87,7 @@ const cart = () => {
                   <div className="border-t mt-8">
                     <div className="flex font-semibold justify-between py-6 text-sm uppercase">
                       <span>Total cost</span>
-//                       <span>${total}</span>
+                      {/* <span>${total}</span> */}
                     </div>
                     <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full rounded-md">
                       Checkout

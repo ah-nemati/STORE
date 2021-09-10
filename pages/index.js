@@ -9,13 +9,13 @@ const Home = (props) => {
       <div className="flex-1">
         <div className="flex-1 container md:max-w-screen-xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-11 sm:gap-10">
-//             {products.length === 0 ? (
+{/* //             {products.length === 0 ? (
 //               <div className="bg-gray-50">no product!</div>
 //             ) : (
 //               products.map((product) => (
 //                 <ProductItem product={product} key={product._id} />
 //               ))
-//             )}
+//             )} */}
           </div>
         </div>
       </div>
