@@ -11,51 +11,53 @@ const Navbar = () => {
   const [down, setDown] = useState(false);
 
   const [state, dispatch] = useContext(DataContext);
-  const { auth,cart } = state;
+  const { auth
+    // ,cart
+   } = state;
   const router = useRouter();
 
-  const logout = () => {
-    Cookie.remove("refreshtoken", {
-      path: `${process.env.BASE_URL}/api/auth/accesstoken`,
-    });
-    localStorage.removeItem("firstlogin");
-    dispatch({ type: "AUTH", payload: {} });
-    dispatch({ type: "NOTIFY", payload: { success: "logged out!" } });
-  };
+  // const logout = () => {
+  //   Cookie.remove("refreshtoken", {
+  //     path: `${process.env.BASE_URL}/api/auth/accesstoken`,
+  //   });
+  //   localStorage.removeItem("firstlogin");
+  //   dispatch({ type: "AUTH", payload: {} });
+  //   dispatch({ type: "NOTIFY", payload: { success: "logged out!" } });
+  // };
 
-  useEffect(() => {
-    if (Object.keys(auth).length !== 0) router.push("/");
-  }, [auth]);
+  // useEffect(() => {
+  //   if (Object.keys(auth).length !== 0) router.push("/");
+  // }, [auth]);
 
-  const profile = () => {
-    return (
-      <div className="px-4">
-        <div className="flex">
-          <img src={auth.user.avatar} alt="" className="w-9" />
-          <button
-            onClick={() => setDown(!down)}
-            className="self-center px-2 hover:shadow-inner rounded-circle"
-          >
-            {auth.user.name}
-          </button>
-        </div>
-        {down ? (
-          <ul className="absolute w-28 bg-white border-2 text-center rounded-md">
-            <li className="p-2">
-              <a href="#">profile</a>
-            </li>
-            <li className="p-2">
-              <a href="#" onClick={logout}>
-                logout
-              </a>
-            </li>
-          </ul>
-        ) : (
-          ""
-        )}
-      </div>
-    );
-  };
+  // const profile = () => {
+  //   return (
+  //     <div className="px-4">
+  //       <div className="flex">
+  //         <img src={auth.user.avatar} alt="" className="w-9" />
+  //         <button
+  //           onClick={() => setDown(!down)}
+  //           className="self-center px-2 hover:shadow-inner rounded-circle"
+  //         >
+  //           {auth.user.name}
+  //         </button>
+  //       </div>
+  //       {down ? (
+  //         <ul className="absolute w-28 bg-white border-2 text-center rounded-md">
+  //           <li className="p-2">
+  //             <a href="#">profile</a>
+  //           </li>
+  //           <li className="p-2">
+  //             <a href="#" onClick={logout}>
+  //               logout
+  //             </a>
+  //           </li>
+  //         </ul>
+  //       ) : (
+  //         ""
+  //       )}
+  //     </div>
+  //   );
+  // };
 
   return (
     <header className="sticky top-0 w-full z-20 bg-white shadow-xl" dir="rtl">
