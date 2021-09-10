@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 // import { Cart } from "../components/Cart";
 // import { DataContext } from "../redux/Store";
 
-const cart = () => {
+const Cart = () => {
   // const [state, dispatch] = useContext(DataContext);
 //   const { cart, notify } = state;
   const [total, setTotal] = useState(0);
@@ -103,4 +103,4 @@ const cart = () => {
   );
 };
 
-export default cart;
+export default Cart;
