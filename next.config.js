@@ -2,7 +2,7 @@ module.exports = {
   reactStrictMode: true,
   env: {
     // BASE_URL: "http://localhost:3000",
-    BASE_URL: "https://store-oa76moq85-elieliot9009-gmailcom.vercel.app"||"https://127.0.0.1:3000",
+    BASE_URL:"https://127.0.0.1:3000",
     MOBGODB_URL:
       "mongodb+srv://eli:elieli@cluster0.stk42.mongodb.net/store?retryWrites=true&w=majority",
     ACCESS_TOKEN_SECRET: "YWJ}>q%b*>V4.&pj4}6@q>jre+2-sKJe>p_M);Z~zsVVn-JsTP",
