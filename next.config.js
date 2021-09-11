@@ -1,7 +1,8 @@
 module.exports = {
   reactStrictMode: true,
   env: {
-    BASE_URL: "http://localhost:3000",
+    // BASE_URL: "http://localhost:3000",
+    BASE_URL: "http://127.0.0.1:3000",
     // BASE_URL: "https://store-lemon.vercel.app",
     MOBGODB_URL:
       "mongodb+srv://eli:elieli@cluster0.stk42.mongodb.net/store?retryWrites=true&w=majority",
