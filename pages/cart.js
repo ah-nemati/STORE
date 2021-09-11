@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Cart } from "../components/Cart";
+import { CartItem } from "../components/CartItem";
 import { DataContext } from "../redux/Store";
 
 const Cart = () => {
@@ -41,9 +41,8 @@ const Cart = () => {
                       Price
                     </h3>
                   </div>
-                  //{" "}
                   {cart.map((item) => (
-                    <Cart
+                    <CartItem
                       key={item._id}
                       item={item}
                       dispatch={dispatch}

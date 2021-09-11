@@ -3,7 +3,7 @@ import { decrease, increase, removeCart } from "../redux/Action";
 
 import { Svg } from "./Svg";
 
-export const Cart = ({ cart, dispatch, item }) => {
+export const CartItem = ({ cart, dispatch, item }) => {
   return (
     <div>
       {item.length === 0 ? (
