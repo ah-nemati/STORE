@@ -1,7 +1,5 @@
 import ConnectDB from "../../../utils/ConnectDB";
 import Product from "../../../models/productModels";
-import valid from "../../../utils/valid";
-import bcrypt from "bcrypt";
 
 ConnectDB();
 

@@ -1,8 +1,8 @@
 module.exports = {
   reactStrictMode: true,
   env: {
-    // BASE_URL: "http://localhost:3000",
-    BASE_URL:"http://192.168.43.255:80",
+    BASE_URL: "http://localhost:3000",
+    // BASE_URL:"http://192.168.43.255:80",
     MOBGODB_URL:
       "mongodb+srv://eli:elieli@cluster0.stk42.mongodb.net/store?retryWrites=true&w=majority",
     ACCESS_TOKEN_SECRET: "YWJ}>q%b*>V4.&pj4}6@q>jre+2-sKJe>p_M);Z~zsVVn-JsTP",
