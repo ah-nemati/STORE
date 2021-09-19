@@ -2,8 +2,7 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <div dir="rtl">
-      <footer className="bg-gray-100 p-4 md:py-8 text-gray-500 mt-10">
+      <div className="bg-gray-100 p-4 md:py-8 text-gray-500 mt-10 rounded-md">
         <div className="grid gap-4 grid-cols-4 grid-row-2 container md:max-w-screen-xl mx-auto">
           <section className=" col-span-4 md:col-span-3 flex flex-col justify-start">
             <div>
@@ -40,7 +39,6 @@ export const Footer = () => {
             <p className="">تمامی حقوق برای دیجی مارکت محفوظ است</p>
           </section>
         </div>
-      </footer>
     </div>
   );
 };

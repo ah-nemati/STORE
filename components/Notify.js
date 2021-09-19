@@ -9,7 +9,6 @@ const Notify = () => {
   const { notify } = state;
   return (
     <>
-      {notify.loading == true && <Loading />}
       {notify.err && (
         <Toast
           msg={{ msg: notify.err }}

@@ -12,14 +12,14 @@ export const CartItem = ({ cart, dispatch, item }) => {
         <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
           <div className="flex w-2/4">
             <div className="w-20">
-              <img className="h-24" src={item.image} alt="" />
+              <img className="md:h-24 h-12" src={item.image} alt="" />
             </div>
             <div className="flex flex-col justify-between ml-4 flex-grow">
               <span className="text-xs">{item.category}</span>
-              <span className="text-red-500 text-xs">{item.title}</span>
+              <span className="text-red-500 text-xs md:block hidden">{item.title}</span>
               <a>
                 <button
-                  className="font-semibold hover:text-red-500 text-gray-500 text-xs"
+                  className="font-semibold hover:text-red-500 text-gray-500 text-sm"
                   onClick={() => dispatch(removeCart(cart, item._id))}
                 >
                   Remove

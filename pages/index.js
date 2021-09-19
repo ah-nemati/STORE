@@ -1,16 +1,25 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useEffect } from "react";
+import { Loading } from "../components/Loading";
 import ProductItem from "../components/ProductItem";
+import { DataContext } from "../redux/Store";
 
-const Home = (props) => {
-  const [products, setProducts] = useState(props.products.products);
+const Home = () => {
+  const [state, dispatch] = useContext(DataContext);
+  useEffect(() => {
+    axios.get("/api/product").then((res) => {
+      const { data } = res;
+      dispatch({ type: "PRODUCTS", payload: data });
+    });
+  }, [dispatch]);
+  const { products } = state.products;
   return (
-    <div className="flex mt-20" dir="rtl">
+    <div className="flex mt-20">
       <div className="flex-1">
         <div className="flex-1 container md:max-w-screen-xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-11 sm:gap-10">
-            {products.length === 0 ? (
-              <div className="bg-gray-50">no product!</div>
+            {!products ? (
+              <Loading />
             ) : (
               products.map((product) => (
                 <ProductItem product={product} key={product._id} />
@@ -22,14 +31,5 @@ const Home = (props) => {
     </div>
   );
 };
-
-export async function getStaticProps(context) {
-  const res = await axios.get(`${process.env.BASE_URL}/api/product`);
-  return {
-    props: {
-      products: res.data,
-    },
-  };
-}
 
 export default Home;

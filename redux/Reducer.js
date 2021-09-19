@@ -1,7 +1,13 @@
 import { Action } from "./Action";
 
 const reducers = (state, action) => {
+  // console.log("action :",action);
   switch (action.type) {
+    case Action.PRODUCTS:
+      return {
+        ...state,
+        products: action.payload,
+      };
     case Action.NOTIFY:
       return {
         ...state,
