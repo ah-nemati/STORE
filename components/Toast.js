@@ -6,7 +6,7 @@ export const Toast = ({ msg, bg, svg, handleshow }) => {
   useEffect(() => {
     const time = setTimeout(() => {
       handleshow();
-    }, 4000);
+    }, 3000);
     return () => {
       clearTimeout(time);
     };
