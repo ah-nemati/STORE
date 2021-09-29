@@ -189,33 +189,30 @@ const Navbar = () => {
     md:flex-row md:items-center justify-between"
           >
             <li className="block">
-              <Href href="/">
-                <a
-                  className="text-gray-700 block hover:bg-purple-700 hover:text-white 
+              <Href
+                href="/"
+                className="text-gray-700 block hover:bg-purple-700 hover:text-white 
           px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  خانه
-                </a>
+              >
+                خانه
               </Href>
             </li>
             <li className="block">
-              <Href href="/blogs">
-                <a
-                  className="text-gray-700 block hover:bg-purple-700 hover:text-white 
+              <Href
+                href="/blogs"
+                className="text-gray-700 block hover:bg-purple-700 hover:text-white 
           px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  بلاگ ها
-                </a>
+              >
+                بلاگ ها
               </Href>
             </li>
             <li className="block">
-              <Href href="/about-us">
-                <a
-                  className="text-gray-700 block hover:bg-purple-700 hover:text-white 
+              <Href
+                href="/about-us"
+                className="text-gray-700 block hover:bg-purple-700 hover:text-white 
           px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  درباره ما
-                </a>
+              >
+                درباره ما
               </Href>
             </li>
           </ul>

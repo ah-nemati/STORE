@@ -1,5 +1,6 @@
 import "../node_modules/tailwindcss/dist/tailwind.css";
-import font from "../styles/fonts.css";
+import "../styles/fonts.css";
+import "../styles/loading.css";
 import { DataProvider } from "../redux/Store";
 import { Layout } from "../components/Layout";
 

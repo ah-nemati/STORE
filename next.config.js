@@ -9,4 +9,8 @@ module.exports = {
     REFRESH_TOKEN_SECRET:
       "Tr7(ALPD-ta2d~cE2e!xVuvK)['Y`kZxv?&y9m=)&4-*[CeYRyNXS2?$]Qb>a_&q;d_^sQHRv&t!J2",
   },
+  images: {
+    loader: 'imgix',
+    path: '',
+  },
 };

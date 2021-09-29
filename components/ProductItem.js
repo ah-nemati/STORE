@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { Svg } from "./Svg";
 import { DataContext } from "../redux/Store";
@@ -29,17 +30,18 @@ const ProductItem = ({ product }) => {
   };
   return (
     <div className="bg-white shadow-xl rounded-lg flex-col m-2">
-      <img
+      <Image
         src={product.image}
+        width={380}
+        height={300}
         alt={product.category}
-        className="object-contain object-center w-full md:80 mb-4 sm:mb-8 rounded-t-lg max-w-full h-64"
-        style={{ boxShadow: "0 0 1px gray" }}
+        className="object-contain object-center w-full mb-4 sm:mb-8 rounded-t-lg max-w-full h-64"
       />
       <div className="flex flex-col px-4">
-        <p className="text-gray-700 md:text-lg text-base sm:text-lg font-bold mb-8 h-20">
+        <p className="text-gray-700 text-sm font-bold mb-8 md:h-16 h-14">
           {product.title}
         </p>
-        <div className="flex items-center text-primary font-bold mb-8 justify-end text-red-500 md:text-lg text-base">
+        <div className="flex items-center font-bold mb-8 justify-end text-red-500 text-base">
           <Svg d="M9 5l7 7-7 7" />
           <Link href={`/product/${product._id}`}>
             <a className=""> نمایش جزییات </a>
@@ -47,14 +49,16 @@ const ProductItem = ({ product }) => {
         </div>
         <div className="flex justify-between items-center mb-4">
           <button
-            className="py-3 md:px-6 px-2 text-base md:text-lg rounded-lg bg-gradient-to-l bg-purple-600 text-white"
+            className="py-3 md:px-3 px-4 text-base rounded-lg bg-gradient-to-l bg-purple-600 text-white"
             onClick={addToCart}
           >
             افزدون به سبد خرید
           </button>
           <div className="flex flex-col justify-between">
             <div className="font-bold">
-              <span className="text-gray-700 md:ml-3 ml-2">{product.price}</span>
+              <span className="text-gray-700 md:ml-3 ml-2">
+                {product.price}
+              </span>
               <span>دلار</span>
             </div>
           </div>
