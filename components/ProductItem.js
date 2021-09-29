@@ -36,6 +36,7 @@ const ProductItem = ({ product }) => {
         height={300}
         alt={product.category}
         className="object-contain object-center w-full mb-4 sm:mb-8 rounded-t-lg max-w-full h-64"
+        loading="lazy"
       />
       <div className="flex flex-col px-4">
         <h6 className="text-gray-700 text-sm font-bold mb-8 md:h-16 h-14">
