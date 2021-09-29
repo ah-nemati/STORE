@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import { Loading } from "../components/Loading";
 import ProductItem from "../components/ProductItem";
 import { DataContext } from "../redux/Store";
+import Head from "next/head";
 
 const Home = () => {
   const [state, dispatch] = useContext(DataContext);
@@ -15,6 +16,9 @@ const Home = () => {
   const { products } = state.products;
   return (
     <div className="flex mt-20 min-h-screen">
+      <Head>
+        <title>Products</title>
+      </Head>
       <div className="flex-1">
         <div className="flex-1 container md:max-w-screen-xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-11 sm:gap-10">

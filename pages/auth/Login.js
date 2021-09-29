@@ -62,7 +62,7 @@ const Login = () => {
         style={{ height: "100vh" }}
       >
         <Head>
-          <title>Register</title>
+          <title>Login</title>
         </Head>
         <div className="w-full max-w-xs">
           <form
