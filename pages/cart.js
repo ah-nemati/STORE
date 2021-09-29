@@ -22,6 +22,7 @@ const Cart = () => {
       <div className="">
         <Head>
           <title>Cart</title>
+          <meta name="description" content="Cart page" />
         </Head>
         <div className="container mx-auto mt-10">
           <div className="flex shadow-md my-10">

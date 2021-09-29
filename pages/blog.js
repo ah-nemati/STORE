@@ -6,6 +6,7 @@ const Blog = () => {
     <div className="min-h-screen">
       <Head>
         <title>Blog</title>
+        <meta name="description" content="Blog page" />
       </Head>
       blog
     </div>

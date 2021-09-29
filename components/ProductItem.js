@@ -38,14 +38,12 @@ const ProductItem = ({ product }) => {
         className="object-contain object-center w-full mb-4 sm:mb-8 rounded-t-lg max-w-full h-64"
       />
       <div className="flex flex-col px-4">
-        <p className="text-gray-700 text-sm font-bold mb-8 md:h-16 h-14">
+        <h6 className="text-gray-700 text-sm font-bold mb-8 md:h-16 h-14">
           {product.title}
-        </p>
+        </h6>
         <div className="flex items-center font-bold mb-8 justify-end text-red-500 text-base">
           <Svg d="M9 5l7 7-7 7" />
-          <Link href={`/product/${product._id}`}>
-            <a className=""> نمایش جزییات </a>
-          </Link>
+          <Link href={`/product/${product._id}`}>نمایش جزییات</Link>
         </div>
         <div className="flex justify-between items-center mb-4">
           <button

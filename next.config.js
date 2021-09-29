@@ -1,5 +1,6 @@
 module.exports = {
   reactStrictMode: true,
+  locales: ["en-US"],
   env: {
     BASE_URL: "http://localhost:3000",
     // BASE_URL:"http://192.168.43.255:3000",
@@ -10,7 +11,7 @@ module.exports = {
       "Tr7(ALPD-ta2d~cE2e!xVuvK)['Y`kZxv?&y9m=)&4-*[CeYRyNXS2?$]Qb>a_&q;d_^sQHRv&t!J2",
   },
   images: {
-    loader: 'imgix',
-    path: '',
+    loader: "imgix",
+    path: "",
   },
 };

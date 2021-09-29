@@ -14,6 +14,7 @@ const DetailProduct = ({ id }) => {
     <div className="flex md:mt-20 mt-10 p-2">
       <Head>
         <title>Product</title>
+        <meta name="description" content="Product page" />
       </Head>
       <div className="grid md:grid-cols-3 grid-cols-1 md:max-w-screen-xl mx-auto">
         <img

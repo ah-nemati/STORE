@@ -106,7 +106,7 @@ const Navbar = () => {
                           "M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
                         }
                       />
-                      <p className="text-sm font-bold ml-2 mr-1">ورود</p>
+                      <h5 className="text-sm font-bold ml-2 mr-1">ورود</h5>
                     </div>
                   </Href>
                 </div>
@@ -170,7 +170,7 @@ const Navbar = () => {
                           "M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
                         }
                       />
-                      <p className="text-sm font-bold ml-2 px-2">ورود</p>
+                      <h5 className="text-sm font-bold ml-2 px-2">ورود</h5>
                     </div>
                   </Href>
                 </div>

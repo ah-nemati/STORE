@@ -18,6 +18,7 @@ const Home = () => {
     <div className="flex mt-20 min-h-screen">
       <Head>
         <title>Products</title>
+        <meta name="description" content="Products page" />
       </Head>
       <div className="flex-1">
         <div className="flex-1 container md:max-w-screen-xl mx-auto">
