@@ -37,7 +37,7 @@ const Register = () => {
     dispatch({ type: "NOTIFY", payload: { loding: true } });
 
     const res = await axios
-      .post(`${process.env.BASE_URL}/api/auth/register`, userdata)
+      .post(`/api/auth/register`, userdata)
       .then((res) => {
         if (res.data.err) {
           return dispatch({ type: "NOTIFY", payload: { err: res.data.err } });

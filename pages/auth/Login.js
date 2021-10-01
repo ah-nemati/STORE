@@ -30,7 +30,7 @@ const Login = () => {
       dispatch({ type: "NOTIFY", payload: { loding: true } });
 
       await axios
-        .post(`${process.env.BASE_URL}/api/auth/login`, userdata)
+        .post(`/api/auth/login`, userdata)
         .then((res) => {
           if (res.data.err && !res) {
             return dispatch({ type: "NOTIFY", payload: { err: res.data.err } });
@@ -45,7 +45,7 @@ const Login = () => {
             },
           });
           Cookie.set("refreshtoken", res.data.refreshtoken, {
-            path: `${process.env.BASE_URL}/api/auth/accesstoken`,
+            path: `/api/auth/accesstoken`,
             expires: 7,
           });
           localStorage.setItem("firstlogin", true);
