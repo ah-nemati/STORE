@@ -16,12 +16,10 @@ export default async (req, res) => {
 const register = async (req, res) => {
   try {
     const { name, email, password, cf_password } = req.body;
-
     const users = await user.findOne({ email });
-    if (users.email === email) {
+    if (users) {
       return res.json({ err: "this email already exists!" });
     }
-
     const errmsg = valid(name, email, password, cf_password);
     if (errmsg) {
       console.log(errmsg);
@@ -40,6 +38,7 @@ const register = async (req, res) => {
     await newuser.save();
     res.json({ msg: "register success!" });
   } catch (err) {
-    return res.status(500).json({ err: err.message });
+    console.log(err);
+    return res.json({ err: err.message });
   }
 };

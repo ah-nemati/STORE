@@ -7,8 +7,10 @@ import { useState, useContext } from "react";
 import { Input } from "../../components/Input";
 import valid from "../../utils/valid";
 import { DataContext } from "../../redux/Store";
+import { useRouter } from "next/router";
 
 const Register = () => {
+  const router = useRouter();
   const initialState = {
     name: "",
     email: "",
@@ -36,14 +38,13 @@ const Register = () => {
     }
     dispatch({ type: "NOTIFY", payload: { loding: true } });
 
-    const res = await axios
-      .post(`/api/auth/register`, userdata)
-      .then((res) => {
-        if (res.data.err) {
-          return dispatch({ type: "NOTIFY", payload: { err: res.data.err } });
-        }
-        return dispatch({ type: "NOTIFY", payload: { success: res.data.msg } });
-      });
+    const res = await axios.post(`/api/auth/register`, userdata).then((res) => {
+      if (res.data.err) {
+        return dispatch({ type: "NOTIFY", payload: { err: res.data.err } });
+      }
+      router.push("/auth/Login");
+      return dispatch({ type: "NOTIFY", payload: { success: res.data.msg } });
+    });
   };
 
   return (
