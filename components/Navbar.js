@@ -42,7 +42,7 @@ const Navbar = () => {
         {down ? (
           <ul className="absolute w-28 bg-white border-2 text-center rounded-md">
             <li className="p-2 hover:bg-purple-600 hover:text-white">
-              <Href href="/Profile">profile</Href>
+              <Href href="/profile">profile</Href>
             </li>
             <li className="p-2 hover:bg-purple-600 hover:text-white">
               <a href="#" onClick={logout}>

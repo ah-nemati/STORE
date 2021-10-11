@@ -35,7 +35,7 @@ const ProductItem = ({ product }) => {
         width={380}
         height={300}
         alt={product.category}
-        className="object-contain object-center w-full mb-4 sm:mb-8 rounded-t-lg max-w-full h-64"
+        className="object-contai object-center w-full mb-4 sm:mb-8 rounded-t-lg max-w-full h-64"
         loading="lazy"
       />
       <div className="flex flex-col px-4">

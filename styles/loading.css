@@ -1,47 +1,51 @@
-.main {
-    top: 50%;
-    left: 50%;
-    display: flex;
-    transform: translate(-50%, -50%);
-    position: absolute;
-  } 
-  
-  .main div {
-    margin: 10px;
-    width: 20px;
-    height: 20px;
-    background-color: #fc6a5f;
-    border-radius: 50%;
-    animation-duration: 0.8s;
-    animation-iteration-count: infinite;
+* {
+  position: unset;
+}
+
+.mainloading {
+  top: 50%;
+  left: 50%;
+  display: flex;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.mainloading div {
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #fc6a5f;
+  border-radius: 50%;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+.one {
+  animation-name: load-one;
+}
+
+@keyframes load-one {
+  30% {
+    transform: translateY(-50%);
   }
-  
-  .one {
-    animation-name: load-one;
+}
+
+.two {
+  animation-name: load-two;
+}
+
+@keyframes load-two {
+  50% {
+    transform: translateY(-50%);
   }
-  
-  @keyframes load-one {
-    30% {
-       transform: translateY(-50%);
-    }
+}
+
+.three {
+  animation-name: load-three;
+}
+
+@keyframes load-three {
+  70% {
+    transform: translateY(-50%);
   }
-  
-  .two {
-    animation-name: load-two;
-  }
-  
-  @keyframes load-two {
-    50% {
-       transform: translateY(-50%);
-    }
-  }
-  
-  .three {
-    animation-name: load-three;
-  }
-  
-  @keyframes load-three {
-    70% {
-       transform: translateY(-50%);
-    }
-  }
+}

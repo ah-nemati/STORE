@@ -15,6 +15,7 @@ export const Input = ({ name, value, handleuser, type }) => {
         name={name}
         value={value}
         onChange={handleuser}
+        spellCheck="false"
       />
     </div>
   );
