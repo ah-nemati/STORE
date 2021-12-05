@@ -1,3 +1,3 @@
  
 ## DIGI MARKET
-show DEMO [digimarket](https://digimarket-store.vercel.app/)
+DEMO [digimarket](https://digimarket-store.vercel.app/)
